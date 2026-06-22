@@ -209,7 +209,7 @@ function loadCompletedResult(result){
   roundScores = result.roundScores;
   totalScore = result.totalScore;
   $("resultsPuzzleNo").textContent = `#${currentPuzzleNo}`;
-  $("shareLine").textContent = roundScores.map(s => `${s}${badge(s)}`).join(" ");
+  $("shareLine").innerHTML = roundScores.map(s => `<span>${s}${badge(s)}</span>`).join("");
   $("finalScore").textContent = totalScore;
   renderAnswers();
   renderAdmire();
@@ -406,7 +406,7 @@ function next(){
 
 function finishGame(){
   $("resultsPuzzleNo").textContent = `#${currentPuzzleNo}`;
-  $("shareLine").textContent = roundScores.map(s => `${s}${badge(s)}`).join(" ");
+  $("shareLine").innerHTML = roundScores.map(s => `<span>${s}${badge(s)}</span>`).join("");
   $("finalScore").textContent = totalScore;
   renderAnswers();
   renderAdmire();

@@ -103,7 +103,19 @@ h3{font-size:17px;margin-top:6px}
 .roundScore{text-align:center;margin-top:auto}
 .roundScore span{display:block;font-size:68px;font-weight:1000;color:var(--good);line-height:1}
 .roundScore small{display:block;color:var(--muted);font-weight:900;font-size:18px;margin-top:8px}
-.shareLine{font-size:24px;font-weight:1000;text-align:center;background:rgba(255,255,255,.08);border-radius:22px;padding:22px 12px;line-height:1.5}
+.shareLine{
+  font-size:clamp(22px, 7vw, 32px);
+  font-weight:1000;
+  text-align:center;
+  background:rgba(255,255,255,.08);
+  border-radius:22px;
+  padding:20px 12px;
+  line-height:1.1;
+  display:grid;
+  grid-template-columns:repeat(5, minmax(0, 1fr));
+  gap:2px;
+  align-items:center;
+}
 .finalScore{text-align:center;padding:26px}
 .finalScore span{display:block;color:var(--muted);font-weight:900;text-transform:uppercase;letter-spacing:.08em}
 .finalScore strong{display:block;font-size:82px;line-height:1;margin-top:8px}
@@ -324,4 +336,12 @@ body::before{
 @keyframes confettiPiece{
   0%{opacity:1;transform:translate(-50%,-50%) rotate(0deg)}
   100%{opacity:0;transform:translate(calc(-50% + var(--x)),calc(-50% + var(--y))) rotate(var(--r))}
+}
+
+.shareLine span{
+  min-width:0;
+  white-space:nowrap;
+  letter-spacing:-.05em;
+  transform:scale(.96);
+  transform-origin:center;
 }
