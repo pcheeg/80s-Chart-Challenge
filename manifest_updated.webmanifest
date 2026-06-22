@@ -1,0 +1,20 @@
+{
+  "name": "80s Chart Challenge",
+  "short_name": "Chart80s",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#100b2d",
+  "theme_color": "#100b2d",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
