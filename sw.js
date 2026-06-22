@@ -1,4 +1,4 @@
-const CACHE = "chart-challenge-v1";
+const CACHE = "chart-challenge-v2";
 const ASSETS = [
   "./",
   "./index.html",
@@ -6,7 +6,9 @@ const ASSETS = [
   "./app.js",
   "./manifest.webmanifest",
   "./songs80s_final_cleaned.json",
-  "./icon.svg"
+  "./icon-192.png",
+  "./icon-512.png",
+  "./apple-touch-icon.png"
 ];
 
 self.addEventListener("install", event => {
