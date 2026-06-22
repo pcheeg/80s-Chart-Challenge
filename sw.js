@@ -1,4 +1,4 @@
-const CACHE = "chart-challenge-v2";
+const CACHE = "chart-challenge-v4";
 const ASSETS = [
   "./",
   "./index.html",
