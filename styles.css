@@ -104,17 +104,19 @@ h3{font-size:17px;margin-top:6px}
 .roundScore span{display:block;font-size:68px;font-weight:1000;color:var(--good);line-height:1}
 .roundScore small{display:block;color:var(--muted);font-weight:900;font-size:18px;margin-top:8px}
 .shareLine{
-  font-size:clamp(22px, 7vw, 32px);
+  font-size:clamp(16px, 5.1vw, 22px);
   font-weight:1000;
   text-align:center;
   background:rgba(255,255,255,.08);
   border-radius:22px;
-  padding:20px 12px;
-  line-height:1.1;
+  padding:18px 8px;
+  line-height:1;
   display:grid;
   grid-template-columns:repeat(5, minmax(0, 1fr));
-  gap:2px;
+  gap:0;
   align-items:center;
+  justify-items:center;
+  overflow:hidden;
 }
 .finalScore{text-align:center;padding:26px}
 .finalScore span{display:block;color:var(--muted);font-weight:900;text-transform:uppercase;letter-spacing:.08em}
@@ -340,8 +342,9 @@ body::before{
 
 .shareLine span{
   min-width:0;
+  max-width:100%;
   white-space:nowrap;
-  letter-spacing:-.05em;
-  transform:scale(.96);
+  letter-spacing:-.1em;
+  transform:scale(.82);
   transform-origin:center;
 }
