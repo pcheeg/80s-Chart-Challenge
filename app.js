@@ -577,8 +577,19 @@ async function boot(){
     console.error(e);
   }
 
+  // Temporarily clear old service workers/caches so iOS sees the latest icon metadata.
   if ("serviceWorker" in navigator) {
-    try { navigator.serviceWorker.register("sw.js"); } catch {}
+    try {
+      const regs = await navigator.serviceWorker.getRegistrations();
+      for (const reg of regs) await reg.unregister();
+    } catch {}
+  }
+
+  if ("caches" in window) {
+    try {
+      const keys = await caches.keys();
+      for (const key of keys) await caches.delete(key);
+    } catch {}
   }
 }
 
